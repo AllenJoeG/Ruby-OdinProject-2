@@ -1,3 +1,20 @@
 <h1>Arrived at Articles#index</h1>
 <h3>Did you GET root or /articles? Or what?</h3>
+
+<ul>
+<%#  alias as specified in controller. .each do == foreach loop  then in pipes a taco alias for the loop %>
+  <% @articles.each do |article| %>
+  <li>
+    <%# print just the title %>
+    <%# article.title %>
+
+    <%# generate a href with title name and feeds corresponding id to the params hash and the Controller router %>
+    <%= link_to article.title, article %>
+  </li>
+  <% end %>
+</ul>
+
+
+
+
 <p>View articulated in app/views/articles/index.html.erb</p>
